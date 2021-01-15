@@ -1,0 +1,19 @@
+{
+  "name": "develop",
+  "version": "1.0.0",
+  "description": "A README generator that will allow a developer to quickly create professional README's for new and existing projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricJostad/ReadMe-Generator.git"
+  },
+  "author": "Eric Jostad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricJostad/ReadMe-Generator/issues"
+  },
+  "homepage": "https://github.com/EricJostad/ReadMe-Generator#readme"
+}
