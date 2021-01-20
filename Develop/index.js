@@ -28,11 +28,52 @@ const questions = [
             // Validation check to ensure user does not miss any necessary inputs
             validate: (value)=> {if (value){ return true} 
             else {return 'We need a value here to proceed.'}}
-        }
-        ,        {
+        },
+        {
             type: 'input',
             message: 'What are the contribution guidelines?',
             name: 'contributions',
+            // Validation check to ensure user does not miss any necessary inputs
+            validate: (value)=> {if (value){ return true} 
+            else {return 'We need a value here to proceed.'}}
+        },
+        {
+            type: 'input',
+            message: 'What are the test instructions?',
+            name: 'instructions',
+            // Validation check to ensure user does not miss any necessary inputs
+            validate: (value)=> {if (value){ return true} 
+            else {return 'We need a value here to proceed.'}}
+        },
+        {
+            type: 'input',
+            message: 'How do you start and use the application?',
+            name: 'usage',
+            // Validation check to ensure user does not miss any necessary inputs
+            validate: (value)=> {if (value){ return true} 
+            else {return 'We need a value here to proceed.'}}
+        },
+        {
+            type: 'list',
+            message: 'Which license was used?',
+            name: 'license',
+            choices: ['MIT','test','test','test','test'],
+            // Validation check to ensure user does not miss any necessary inputs
+            validate: (value)=> {if (value){ return true} 
+            else {return 'We need a value here to proceed.'}}
+        },
+        {
+            type: 'input',
+            message: 'What is your github?',
+            name: 'github',
+            // Validation check to ensure user does not miss any necessary inputs
+            validate: (value)=> {if (value){ return true} 
+            else {return 'We need a value here to proceed.'}}
+        },
+        {
+            type: 'input',
+            message: 'What is your email?',
+            name: 'email',
             // Validation check to ensure user does not miss any necessary inputs
             validate: (value)=> {if (value){ return true} 
             else {return 'We need a value here to proceed.'}}
