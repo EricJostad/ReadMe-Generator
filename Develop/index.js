@@ -1,10 +1,12 @@
 // Required Node modules
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { EMLINK } = require('constants');
 
-// TODO: Create an array of questions for user input
-const questions = [
+// // TODO: Create an array of questions for user input
+// const questions = [
     inquirer.prompt(
+    [
         {
             type: 'input',
             message: 'What is the title of the application?',
@@ -78,14 +80,60 @@ const questions = [
             validate: (value)=> {if (value){ return true} 
             else {return 'We need a value here to proceed.'}}
         }
-    )
-];
+    ]
+    
+// ]
+),then((
+    title,
+    description,
+    installation,
+    contributions,
+    instructions,
+    usage,
+    license,
+    github,
+    email
+)=>{
+// Template to be used
+const template = `# ${title}
+*[Installation][#installation]
+*[usage][#usage]
+*[Contributions][#contributions]
+*[License][#license]
+# Installation
+${installation}
+## Usage
+${usage}
+## Contributions
+${contributions}
+## License
+${license}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+# Contact
+# GitHub: ${github}
+# E-Mail: ${email}`;
 
-// TODO: Create a function to initialize app
-function init() {}
+// This function will create our README using fs
+createNewFile(title, template);
+}
+);
 
-// Function call to initialize app
-init();
+// Creating our createNewFile function
+function createNewFile(fileName, data){
+    // fs
+    fs.writeFile(`./${fileName.toLowerCase().split('').join('')}.md`, data,()=>{
+        if(err){
+            console.log(err)
+        }
+        console.log('Your README has been generated.');
+    })
+
+    }
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {}
+
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();
