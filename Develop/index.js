@@ -11,47 +11,47 @@ const questions = [
             name: 'title',
             // Validation check to ensure user does not miss any necessary inputs
             validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            else {return 'Please specify a title for your application.'}}
         },
         {
             type: 'input',
             message: 'What is the description of the application?',
             name: 'description',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value.length > 5){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            validate: (value)=> {if (value.length > 10){ return true} 
+            else {return 'Please provide a bit more detail.'}}
         },
         {
             type: 'input',
             message: 'What are the installation instructions?',
             name: 'installation',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            validate: (value)=> {if (value.length > 10){ return true} 
+            else {return 'Please provide a bit more detail.'}}
         },
         {
             type: 'input',
             message: 'What are the contribution guidelines?',
             name: 'contributions',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            validate: (value)=> {if (value.length > 10){ return true} 
+            else {return 'Please provide a bit more detail.'}}
         },
         {
             type: 'input',
             message: 'What are the test instructions?',
             name: 'instructions',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            validate: (value)=> {if (value.length > 10){ return true} 
+            else {return 'Please provide a bit more detail.'}}
         },
         {
             type: 'input',
             message: 'How do you start and use the application?',
             name: 'usage',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            validate: (value)=> {if (value.length > 10){ return true} 
+            else {return 'Please provide a bit more detail.'}}
         },
         {
             type: 'list',
@@ -60,7 +60,7 @@ const questions = [
             choices: ['MIT','test','test','test','test'],
             // Validation check to ensure user does not miss any necessary inputs
             validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            else {return 'Please select a license.'}}
         },
         {
             type: 'input',
@@ -68,15 +68,15 @@ const questions = [
             name: 'github',
             // Validation check to ensure user does not miss any necessary inputs
             validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            else {return 'We share your GitHub information.'}}
         },
         {
             type: 'input',
             message: 'What is your email?',
             name: 'email',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value){ return true} 
-            else {return 'We need a value here to proceed.'}}
+            validate: (value)=> {if (value.includes('@')){ return true} 
+            else {return 'Please enter in a valid email.'}}
         }
     ]
     
