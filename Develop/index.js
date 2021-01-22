@@ -1,12 +1,9 @@
 // Required Node modules
 const inquirer = require('inquirer');
-const fs = require('fs');
-const { EMLINK } = require('constants');
+const fs = require('fs');;
 
 // // TODO: Create an array of questions for user input
-// const questions = [
-    inquirer.prompt(
-    [
+const questions = [
         {
             type: 'input',
             message: 'What is the title of the application?',
@@ -82,58 +79,60 @@ const { EMLINK } = require('constants');
         }
     ]
     
-// ]
-),then((
-    title,
-    description,
-    installation,
-    contributions,
-    instructions,
-    usage,
-    license,
-    github,
-    email
-)=>{
-// Template to be used
-const template = `# ${title}
-*[Installation][#installation]
-*[usage][#usage]
-*[Contributions][#contributions]
-*[License][#license]
-# Installation
-${installation}
-## Usage
-${usage}
-## Contributions
-${contributions}
-## License
-${license}
+// ),then((
+//     title,
+//     description,
+//     installation,
+//     contributions,
+//     instructions,
+//     usage,
+//     license,
+//     github,
+//     email
+// )=>{
+// // Template to be used
+// const template = `# ${title}
+// *[Installation][#installation]
+// *[usage][#usage]
+// *[Contributions][#contributions]
+// *[License][#license]
+// # Installation
+// ${installation}
+// ## Usage
+// ${usage}
+// ## Contributions
+// ${contributions}
+// ## License
+// ${license}
 
-# Contact
-# GitHub: ${github}
-# E-Mail: ${email}`;
+// # Contact
+// # GitHub: ${github}
+// # E-Mail: ${email}`;
 
-// This function will create our README using fs
-createNewFile(title, template);
+// // This function will create our README using fs
+// createNewFile(title, template);
+// }
+// );
+
+// // Creating our createNewFile function
+// function createNewFile(fileName, data){
+//     // fs
+//     fs.writeFile(`./${fileName.toLowerCase().split('').join('')}.md`, data,()=>{
+//         if(err){
+//             console.log(err)
+//         }
+//         console.log('Your README has been generated.');
+//     })
+
+//     }
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+async function init() {
+    const answers = await inquirer.prompt(questions);
+    console.log('answers are: ', answers)
 }
-);
 
-// Creating our createNewFile function
-function createNewFile(fileName, data){
-    // fs
-    fs.writeFile(`./${fileName.toLowerCase().split('').join('')}.md`, data,()=>{
-        if(err){
-            console.log(err)
-        }
-        console.log('Your README has been generated.');
-    })
-
-    }
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
+// Function call to initialize app 
+init();
