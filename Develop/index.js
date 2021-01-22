@@ -17,7 +17,7 @@ const questions = [
             message: 'What is the description of the application?',
             name: 'description',
             // Validation check to ensure user does not miss any necessary inputs
-            validate: (value)=> {if (value){ return true} 
+            validate: (value)=> {if (value.length > 5){ return true} 
             else {return 'We need a value here to proceed.'}}
         },
         {
