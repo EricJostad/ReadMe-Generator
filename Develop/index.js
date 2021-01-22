@@ -1,6 +1,7 @@
 // Required Node modules
+const generateMarkdown = require('./utils/generateMarkdown');
 const inquirer = require('inquirer');
-const fs = require('fs');;
+const fs = require('fs');
 
 // // TODO: Create an array of questions for user input
 const questions = [
@@ -126,12 +127,17 @@ const questions = [
 
 //     }
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, 'utf8', (err) => console.log('Error in write file: ', err));
+}
 
 // TODO: Create a function to initialize app
 async function init() {
     const answers = await inquirer.prompt(questions);
-    console.log('answers are: ', answers)
+    console.log('answers are: ', answers);
+    const markdown = generateMarkdown(answers);
+    console.log('generated markdown: ', markdown);
+    writeToFile(answers.title + '_readme.md', markdown)
 }
 
 // Function call to initialize app 
