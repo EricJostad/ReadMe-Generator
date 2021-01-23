@@ -37,26 +37,6 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What are the contribution guidelines?',
-        name: 'contributions',
-        // Validation check to ensure user does not miss any necessary inputs
-        validate: (value) => {
-            if (value.length > 10) { return true }
-            else { return 'Please provide a bit more detail.' }
-        }
-    },
-    {
-        type: 'input',
-        message: 'What are the test instructions?',
-        name: 'instructions',
-        // Validation check to ensure user does not miss any necessary inputs
-        validate: (value) => {
-            if (value.length > 10) { return true }
-            else { return 'Please provide a bit more detail.' }
-        }
-    },
-    {
-        type: 'input',
         message: 'How do you start and use the application?',
         name: 'usage',
         // Validation check to ensure user does not miss any necessary inputs
@@ -66,15 +46,30 @@ const questions = [
         }
     },
     {
+        type: 'input',
+        message: 'Would you like to credit anyone?',
+        name: 'credit',
+    },
+    {
         type: 'list',
         message: 'Which license was used?',
         name: 'license',
         choices: ['Apache', 'BSD 2-Clause', 'BSD 3-Clause', 'GPLv2', 'GPLv3', 'MIT', 'Mozilla'],
-        // Validation check to ensure user does not miss any necessary inputs
-        validate: (value) => {
-            if (value) { return true }
-            else { return 'Please select a license.' }
-        }
+    },
+    {
+        type: 'input',
+        message: 'Are there any features that you would like to highlight?',
+        name: 'features',
+    },
+    {
+        type: 'input',
+        message: 'Would you like to add contribution guidelines?',
+        name: 'contributions',
+    },
+    {
+        type: 'input',
+        message: 'What are the test instructions, if any?',
+        name: 'instructions',
     },
     {
         type: 'input',
@@ -95,6 +90,11 @@ const questions = [
             if (value.includes('@')) { return true }
             else { return 'Please enter in a valid email.' }
         }
+    },
+    {
+        type: 'input',
+        message: 'If you have LinkedIn, would you like to include it?',
+        name: 'linkedin',
     }
 ]
 
