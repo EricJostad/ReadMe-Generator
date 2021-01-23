@@ -69,7 +69,7 @@ const questions = [
         type: 'list',
         message: 'Which license was used?',
         name: 'license',
-        choices: ['MIT', 'test', 'test', 'test', 'test'],
+        choices: ['MIT', 'Mozilla', 'test', 'test', 'test'],
         // Validation check to ensure user does not miss any necessary inputs
         validate: (value) => {
             if (value) { return true }

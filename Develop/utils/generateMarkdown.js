@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  console.log(license)
   let result;
   switch (license) {
     case 'MIT':
@@ -19,15 +20,28 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  console.log(license)
+  let result;
   switch (license) {
     case 'MIT':
+      result = '[MIT](https://opensource.org/licenses/MIT)';
+      break;
+    case 'Mozilla':
+      result = '[Mozilla](https://opensource.org/licenses/MPL-2.0)';
+      break;
+      default:
+        result = '';
+        break;
   }
+  return result;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return 'Awesome choice of license!';
+  console.log(license)
+  return `${renderLicenseBadge(license)}  
+  ${renderLicenseLink(license)}`;
 }
 
 // TODO: Create a function to generate markdown for README
