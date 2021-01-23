@@ -95,6 +95,7 @@ function generateMarkdown({ title, description, license, installation, usage, cr
   # License
   ${renderLicenseSection(license)} 
 
+  ## Table of Contents
   *[Installation](#installation) 
   *[Usage](#usage) 
   *[Credits](#credits) 
