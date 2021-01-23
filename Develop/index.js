@@ -69,7 +69,7 @@ const questions = [
         type: 'list',
         message: 'Which license was used?',
         name: 'license',
-        choices: ['MIT', 'Mozilla', 'test', 'test', 'test'],
+        choices: ['Apache', 'BSD 2-Clause', 'BSD 3-Clause', 'GPLv2', 'GPLv3', 'MIT', 'Mozilla'],
         // Validation check to ensure user does not miss any necessary inputs
         validate: (value) => {
             if (value) { return true }
@@ -83,7 +83,7 @@ const questions = [
         // Validation check to ensure user does not miss any necessary inputs
         validate: (value) => {
             if (value) { return true }
-            else { return 'We share your GitHub information.' }
+            else { return 'Please share your GitHub information.' }
         }
     },
     {
