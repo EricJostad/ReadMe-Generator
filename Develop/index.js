@@ -48,7 +48,7 @@ const questions = [
     {
         type: 'input',
         message: 'Would you like to credit anyone?',
-        name: 'credit',
+        name: 'credits',
     },
     {
         type: 'list',
@@ -97,36 +97,6 @@ const questions = [
         name: 'linkedin',
     }
 ]
-
-// ),then((
-//     title,
-//     description,
-//     installation,
-//     contributions,
-//     instructions,
-//     usage,
-//     license,
-//     github,
-//     email
-// )=>{
-// // Template to be used
-// const template = `# ${title}
-// *[Installation][#installation]
-// *[usage][#usage]
-// *[Contributions][#contributions]
-// *[License][#license]
-// # Installation
-// ${installation}
-// ## Usage
-// ${usage}
-// ## Contributions
-// ${contributions}
-// ## License
-// ${license}
-
-// # Contact
-// # GitHub: ${github}
-// # E-Mail: ${email}`;
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {

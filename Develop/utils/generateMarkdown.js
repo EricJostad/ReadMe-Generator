@@ -7,11 +7,11 @@ function renderLicenseBadge(license) {
       result = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
       break;
 
-      case 'BSD 2-Clause':
+    case 'BSD 2-Clause':
       result = '[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)';
       break;
 
-      case 'BSD 3-Clause':
+    case 'BSD 3-Clause':
       result = '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
       break;
 
@@ -86,11 +86,40 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({ title, description, license }) {
-  return `# ${title} /n
-  description: ${description} /n
-  license: ${renderLicenseSection(license)}
-`;
+function generateMarkdown({ title, description, license, installation, usage, credits, 
+  features, contributions, instructions, github, email, linkedin }) {
+  return `# ${title}
+  # Description
+  ${description} 
+
+  # License
+  ${renderLicenseSection(license)} 
+
+  *[Installation](#installation) 
+  *[Usage](#usage) 
+  *[Credits](#credits) 
+  *[Features](#features) 
+  *[Contributions](#contributions) 
+  *[Instructions](#instructions) 
+  license: ${renderLicenseSection(license)} 
+
+  ## Installation 
+  ${installation} 
+  ## Usage 
+  ${usage} 
+  ## Credits 
+  ${credits} 
+  ## Features 
+  ${features} 
+  ## Contributions 
+  ${contributions} 
+  ## Instructions 
+  ${instructions} 
+
+  # Contact Information 
+  # GitHub: ${github}
+  # E-Mail: ${email}
+  # LinkedIn: ${linkedin}`;
 }
 
 module.exports = generateMarkdown;
