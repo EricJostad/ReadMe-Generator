@@ -14,7 +14,8 @@ Using NodeJS and the command line interface, this application uses the inquirer 
 Using this same information, the application takes and structures the information into a ReadMe markdown file which will be easy
 to add to an existing project. 
 
-## Demonstration: <iframe src="https://drive.google.com/file/d/14nr2yqN-8o5nv1o0HJ3BJzNPtDSFwImn/preview" width="640" height="480"></iframe>
+## Demonstration: 
+https://drive.google.com/file/d/14nr2yqN-8o5nv1o0HJ3BJzNPtDSFwImn/preview
 
 
 ## Technologies
