@@ -9,12 +9,12 @@
 - [Author](#author)
 
 ## General Info
-This application is meant to aid its users in creating simplete, consistent, and professional ReadMe files for their applications and projects. 
+This application is meant to aid its users in creating simple, consistent, and professional ReadMe files for their applications and projects. 
 Using NodeJS and the command line interface, this application uses the inquirer package to obtain user-entered information.
 Using this same information, the application takes and structures the information into a ReadMe markdown file which will be easy
 to add to an existing project. 
 
-## Demonstration:
+## Demonstration: <iframe src="https://drive.google.com/file/d/14nr2yqN-8o5nv1o0HJ3BJzNPtDSFwImn/preview" width="640" height="480"></iframe>
 
 
 ## Technologies
@@ -26,7 +26,8 @@ right here (https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)!
 
 ## Next Steps
 - Update license list with additional license options for user to choose from.
-- Possible restructuring of the ReadMe template
+- Update the application to hide any sections of the ReadMe that are not used or specificed in the markdown file.
+- Possible restructuring of the ReadMe template.
 
 ## Author
 - Eric Jostad
