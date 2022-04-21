@@ -31,4 +31,4 @@ right here (https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)!
 - Possible restructuring of the ReadMe template.
 
 ## Author
--Eric Jostad | eric.jostad@outlook.com | 407-409-0064
+- Eric Jostad | eric.jostad@outlook.com | 407-409-0064
